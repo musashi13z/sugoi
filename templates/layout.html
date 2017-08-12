@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>なんでも解析機</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="static/images/favicon.ico">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css">
+    <link rel=stylesheet type=text/css href="static/css/style.css">
+  </head>
+  <body>
+
+    <header class="header">
+      <h2 class="title">なんでも解析機</h2>
+    </header>
+
+    <main class="main">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer-content">
+          <li><a href="https://github.com/musashi13z/sugoi" target="_blank">github</a></li>
+          <li>Powered by
+            <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>,
+            <a href="http://milligram.io/" target="_blank">Milligram</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

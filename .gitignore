@@ -1,0 +1,8 @@
+# mac
+DS_Store
+# python
+*.pyc
+__pycache__/
+# log
+log/
+!.gitkeep

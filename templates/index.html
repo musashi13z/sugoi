@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="balloon center">
+      <p id="msg">画像を選択してください。</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <form action="/detect" method="post" enctype="multipart/form-data" class="center" id="imgForm">
+    <fieldset>
+
+      <div class="page-top">
+        <div class="row">
+          <label for="sendFile" class="button center">
+            ファイル選択
+            <input type="file" name="file" accept="image/*" id="sendFile" class="d-none">
+          </label>
+        </div>
+      </div>
+
+      <div class="page-ready d-none">
+        <div class="row">
+          <button type="submit" class="button center">解析中開始</button>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+
+  <div class="page-result d-none">
+    <div class="row">
+      <button class="button center reset-all">もう一度解析する</button>
+    </div>
+  </div>
+
+  <div class="page-fail d-none">
+    <div class="row">
+      <button class="button center reset-all">もう一度解析する</button>
+    </div>
+  </div>
+
+  <div id="display-img" class="d-none">
+    <div class="row" style="position: relative;">
+      <div class="img-frame">
+        <div class="loading-bg page-detecting d-none">
+          <div class="loading page-detecting d-none"></div>
+        </div>
+        <canvas id="cnvs"></canvas>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
