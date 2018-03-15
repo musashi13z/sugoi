@@ -34,8 +34,8 @@ $(function() {
   const CS_FONT_SIZE = 30;
 
   /* グローバル変数 */
-  var now = 'page-top';
-  var isUpload = false;
+  let now = 'page-top';
+  let isUpload = false;
 
   /* onのイベントセット */
 
@@ -124,7 +124,7 @@ $(function() {
       // 画像をロードしたらコールバック
       image.onload = function() {
         var cnvsW = image.width;
-        var cnvsH = cnvsW*image.naturalHeight/image.naturalWidth;
+        var cnvsH = cnvsW * image.naturalHeight / image.naturalWidth;
         canvas.attr('width', cnvsW);
         canvas.attr('height', cnvsH);
         ctx.drawImage(image, 0, 0, cnvsW, cnvsH);
@@ -176,16 +176,15 @@ $(function() {
     // 枠
     ctx.lineWidth = 5;
     ctx.strokeStyle = TARGETS[label]['color'];
-    var rectWidth = name.length *
     ctx.strokeRect(rect['left'], rect['bottom'], rectWidth, CS_FONT_SIZE * 2 + 15);
   }
 
   // 名前を描画する
   function drawName(ctx, rect, label, rate) {
-    ctx.font = "bold " + CS_FONT_SIZE + "px 'Arial'";
+    ctx.font = `bold ${CS_FONT_SIZE}px 'Arial'`;
     ctx.fillStyle = TEXT_COLOR;
     ctx.fillText(TARGETS[label]['name'], rect['left'] + 7.5, rect['bottom'] + CS_FONT_SIZE + 5);
-    ctx.fillText(rate + '%', rect['left'] + 7.5, rect['bottom'] + CS_FONT_SIZE * 2 + 7.5);
+    ctx.fillText(`${rate}%`, rect['left'] + 7.5, rect['bottom'] + CS_FONT_SIZE * 2 + 7.5);
   }
 
   // アップロードした画像から情報取得
