@@ -176,7 +176,6 @@ $(function() {
     // 枠
     ctx.lineWidth = 5;
     ctx.strokeStyle = TARGETS[label]['color'];
-    var rectWidth = name.length * CS_FONT_SIZE;
     ctx.strokeRect(rect['left'], rect['bottom'], rectWidth, CS_FONT_SIZE * 2 + 15);
   }
 
